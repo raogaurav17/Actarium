@@ -1,0 +1,34 @@
+{
+  "slug": "cyber-crime-laws",
+  "name": "Cyber Crime Laws",
+  "full_name": "Information Technology Act, 2000 (Cyber Crime Provisions)",
+  "icon": "🔐",
+  "short_description": "Safeguards your digital life by punishing cybercrimes like identity theft, online fraud, and privacy violations. It also legally recognizes electronic transactions, making your online communications, digital payments, and e-filing safer and legally valid.",
+  "summary": "The Information Technology (IT) Act, 2000 is India’s main law for the digital world. It gives legal status to online transactions and documents while protecting internet users from cybercrimes. This law applies to everyone in India, and even to people abroad who target Indian computers. It matters because it ensures that our digital lives, personal data, and online transactions remain safe.\n\nThe law protects your right to digital safety and privacy. It makes it a crime for anyone to steal your identity (like using your passwords), hack your devices, or cheat you online. Crucially, it protects your personal privacy by punishing anyone who shares your private photos without your consent or leaks your confidential data. It also strictly bans online child abuse, offensive content, and cyber terrorism that threatens national security.\n\nIf you are a victim of a cybercrime, this law gives you the right to seek justice. Depending on the crime, offenders face heavy fines and jail terms ranging from three years to life imprisonment. Ultimately, this law helps keep the internet a safer space for you and your family.",
+  "key_rights": [
+    "Individuals have a right to privacy under Section 66E, which prohibits the intentional capturing, publishing, or transmitting of images of their private areas without consent.",
+    "Individuals have a right to confidentiality under Section 72, which penalizes any person who secures access to electronic records or documents and discloses them without consent.",
+    "Individuals have a right to protect their personal information under Section 72A, which penalizes intermediaries or service providers who disclose personal data in breach of a lawful contract without consent.",
+    "Individuals have the right to protect their unique digital identity under Section 66C, which penalizes the fraudulent or dishonest use of another person's electronic signature, password, or unique identification features."
+  ],
+  "important_provisions": [
+    "Section 65 makes it an offence to knowingly or intentionally conceal, destroy, or alter any computer source code when it is required by law to be maintained.",
+    "Section 66F defines and criminalizes cyber terrorism, targeting acts that threaten the unity, integrity, security, or sovereignty of India or strike terror in the people.",
+    "Section 67B prohibits the publication, transmission, creation, or distribution of material depicting children in sexually explicit acts or conduct in electronic form.",
+    "Section 66D prohibits cheating by personation using any communication device or computer resource."
+  ],
+  "penalties": [
+    "Under Section 66F, committing or conspiring to commit cyber terrorism is punishable with imprisonment which may extend to imprisonment for life.",
+    "Under Section 67A, publishing or transmitting material containing sexually explicit acts is punishable on first conviction with imprisonment up to five years and a fine up to ten lakh rupees.",
+    "Under Section 65, tampering with computer source documents is punishable with imprisonment up to three years, or a fine up to two lakh rupees, or both.",
+    "Under Section 72, breach of confidentiality and privacy is punishable with imprisonment up to two years, or a fine up to one lakh rupees, or both."
+  ],
+  "who_can_benefit": [
+    "Individuals whose electronic signatures, passwords, or unique identification features are stolen or misused can seek protection and justice under Section 66C.",
+    "Children are protected from online exploitation, abuse, and depiction in sexually explicit materials under the strict provisions of Section 67B.",
+    "Individuals who share personal information with service providers or intermediaries under a contract benefit from Section 72A, which penalizes unauthorized disclosure of their data.",
+    "General internet users benefit from Section 66E, which protects them against unauthorized capture and transmission of images of their private areas."
+  ],
+  "source_url": "https://www.indiacode.nic.in/show-data?actid=AC_CEN_23_1_00001999_200021&sectionId=13085&sectionno=1&orderno=1",
+  "audio_url": "/api/audio/cyber-crime-laws"
+}

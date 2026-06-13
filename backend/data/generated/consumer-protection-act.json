@@ -1,0 +1,30 @@
+{
+  "slug": "consumer-protection-act",
+  "name": "Consumer Protection Act",
+  "full_name": "Consumer Protection Act, 2019",
+  "icon": "🧑‍⚖️",
+  "short_description": "Protects buyers from defective goods, deficient services, and misleading advertisements by setting up dedicated consumer courts at district, state, and national levels. It empowers you to file complaints and claim compensation for any harm caused by faulty products or unfair business practices.",
+  "summary": "The Consumer Protection Act, 2019, is a powerful Indian law designed to protect everyday buyers from being cheated by businesses. It covers anyone who purchases goods or uses services for personal use, whether shopping at a local store or online. \n\nThis law gives you vital rights. It protects you against defective items, poor services, unfair contracts, and misleading advertisements. If a faulty product or bad service harms you, the law makes the manufacturer or seller compensate you for the damage. It also sets up a national watchdog to stop unfair business practices and false advertisements.\n\nWhy does this matter? It ensures you are not left helpless when a business sells you a bad product or lies to you. If you have a dispute, you can file a complaint in special consumer courts set up at the District, State, or National levels, depending on the value of your purchase. This law makes sure your complaints are resolved quickly, giving you a safe and fair shopping experience.",
+  "key_rights": [
+    "Consumers have the right to be protected against unfair trade practices, restrictive trade practices, and misleading advertisements under Section 10 and Section 18.",
+    "Consumers have the right to seek compensation for harm caused by defective products or deficient services through product liability actions under Section 82.",
+    "Consumers have the right to file complaints in the District Commission within the local limits of where they reside or personally work for gain under Section 34(2)(d)."
+  ],
+  "important_provisions": [
+    "Section 10 provides for the establishment of the Central Consumer Protection Authority to regulate violations of consumer rights, unfair trade practices, and misleading advertisements.",
+    "Section 34 establishes the pecuniary jurisdiction of the District Commission to entertain complaints where the value of goods or services paid as consideration does not exceed one crore rupees.",
+    "Section 47 and Section 58 establish the pecuniary jurisdictions of the State Commission (one to ten crore rupees) and the National Commission (exceeding ten crore rupees) respectively.",
+    "Section 82 provides that a product liability action may be brought by a complainant against a product manufacturer, product service provider, or product seller for harm caused by a defective product."
+  ],
+  "penalties": [
+    "No criminal penalties — civil remedies only"
+  ],
+  "who_can_benefit": [
+    "Individual consumers who buy goods or hire services for consideration, excluding those who acquire them for commercial purposes, can benefit under Section 2(6).",
+    "Voluntary consumer associations registered under any law can benefit by filing complaints on behalf of consumers under Section 2(4)(ii).",
+    "Legal heirs or legal representatives of a deceased consumer can benefit by pursuing complaints under Section 2(4)(vi).",
+    "Groups of consumers with a common interest can benefit through collective complaints filed under Section 2(4)(v)."
+  ],
+  "source_url": "https://consumeraffairs.gov.in/public/upload/files/Consumer_Protection_Act_2019.pdf",
+  "audio_url": "/api/audio/consumer-protection-act"
+}

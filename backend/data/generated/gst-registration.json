@@ -1,0 +1,31 @@
+{
+  "slug": "gst-registration",
+  "name": "GST Registration",
+  "full_name": "Goods and Services Tax — Registration Provisions (CGST Act, 2017)",
+  "icon": "💰",
+  "short_description": "Guides business owners on when they must register for GST, setting a starting turnover limit of ₹20 lakhs (₹10 lakhs in special states). It exempts farmers, allows voluntary registration, and explains how to apply or cancel a registration.",
+  "summary": "This law sets the rules for who must register for Goods and Services Tax (GST) in India. It protects small shopkeepers, startups, and farmers from unnecessary tax paperwork. Under these rules, you only need to register if your yearly business sales exceed ₹20 lakhs (or ₹10 lakhs in hilly and northeastern states). Farmers selling their own crops and businesses selling tax-free goods are completely exempt from registering. \n\nAs a business owner, you have the right to register voluntarily to build trust with customers, even if your sales are below the limit. If you do cross the sales limit, or if you sell goods online or across different states, you must apply for GST within 30 days. You also have the right to easily cancel your registration if you close or sell your business. \n\nThis law matters because it creates a fair and transparent marketplace. It ensures larger businesses and online platforms pay their share of taxes while keeping small-scale sellers stress-free. To keep the system honest, the government can cancel the registration of any business that fails to file its tax returns for six consecutive months or engages in fraud.",
+  "key_rights": [
+    "Under Section 25(3), any person who is not otherwise liable to register has the right to obtain voluntary registration and be subject to all applicable provisions of the Act.",
+    "Under Section 25(2), a person with multiple business verticals in a State or Union territory has the right to obtain separate registrations for each business vertical.",
+    "Under Section 29(1), a registered person or their legal heirs in the event of death have the right to apply for the cancellation of their registration.",
+    "Under Section 27(1), a casual taxable person or a non-resident taxable person has the right to seek an extension of their registration validity for up to an additional ninety days upon showing sufficient cause."
+  ],
+  "important_provisions": [
+    "Section 22(1) establishes that suppliers are liable for registration if their aggregate turnover in a financial year exceeds twenty lakh rupees, or ten lakh rupees in special category States.",
+    "Section 24 mandates compulsory registration for specific categories, including persons making inter-State taxable supplies and electronic commerce operators, regardless of turnover.",
+    "Section 25(1) requires liable persons to apply for registration within thirty days of becoming liable, while casual and non-resident taxable persons must apply at least five days prior to commencing business.",
+    "Section 27(2) requires casual and non-resident taxable persons to make an advance deposit of tax equivalent to their estimated tax liability when applying for registration."
+  ],
+  "penalties": [
+    "No criminal penalties — civil remedies only"
+  ],
+  "who_can_benefit": [
+    "Agriculturists benefit under Section 23(1)(b) as they are exempt from registration to the extent of supply of produce from land cultivation.",
+    "Persons exclusively supplying goods or services not liable to tax or wholly exempt benefit under Section 23(1)(a) by being exempt from registration.",
+    "Small businesses benefit under Section 22(1) as they are not required to register if their annual aggregate turnover remains below the specified thresholds of ten or twenty lakh rupees.",
+    "Special Economic Zone units or developers benefit under Section 25(1) by being permitted to obtain a separate registration distinct from their other business locations."
+  ],
+  "source_url": "https://cbic-gst.gov.in/cgst-act-2017.html",
+  "audio_url": "/api/audio/gst-registration"
+}

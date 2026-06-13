@@ -1,0 +1,33 @@
+{
+  "slug": "pocso-act",
+  "name": "POCSO Act",
+  "full_name": "Protection of Children from Sexual Offences Act, 2012",
+  "icon": "🛡️",
+  "short_description": "Safeguards children under 18 from sexual abuse, harassment, and pornography by ensuring strict punishments for offenders. It sets up special courts for quick trials and makes it a legal duty for citizens to report any suspected abuse to the police.",
+  "summary": "The Protection of Children from Sexual Offences (POCSO) Act, 2012, is a special Indian law made to protect children from sexual abuse, sexual harassment, and pornography. It protects everyone under the age of 18, regardless of their gender, ensuring their right to a safe and secure childhood.\n\nThis law defines various sexual crimes and sets strict punishments, which become even harsher if the abuser is someone the child trusts, such as a family member, teacher, or police officer. To make the legal process less scary for young victims, the law establishes special, child-friendly courts for fast trials and ensures that any fines collected from the offender are given to the child to help them recover.\n\nThe POCSO Act matters because it makes child safety a collective responsibility. It is legally mandatory for anyone—including neighbors, doctors, and hotel staff—who suspects or knows about child abuse to report it to the police immediately. By punishing those who stay silent and creating a supportive system, this law helps break the silence around abuse and holds offenders accountable.",
+  "key_rights": [
+    "All children have the right to a safe and secure childhood as guaranteed by the Constitution of India and supported by the United Nations Convention on the Rights of the Child.",
+    "Under Section 6(2), a child victim of aggravated penetrative sexual assault has the right to receive the fine imposed on the offender, which must be just and reasonable.",
+    "Under Section 19(1), any child has the right to report an apprehension or knowledge of a sexual offence directly to the Special Juvenile Police Unit or the local police."
+  ],
+  "important_provisions": [
+    "Section 3 defines 'penetrative sexual assault' to include various acts of penetration, insertion of objects, or manipulation of a child's body parts with sexual intent.",
+    "Section 5 outlines the specific circumstances that constitute 'aggravated penetrative sexual assault', such as when the offence is committed by a police officer, public servant, or person in a position of trust.",
+    "Section 19 mandates that any person who has an apprehension or knowledge that an offence under the Act is likely to be or has been committed must report it to the authorities.",
+    "Section 20 imposes a legal obligation on personnel of media, hotels, hospitals, and photographic facilities to immediately report any sexually exploitative material of a child to the police."
+  ],
+  "penalties": [
+    "Under Section 4, committing penetrative sexual assault is punishable with imprisonment of not less than seven years up to life imprisonment, along with a fine.",
+    "Under Section 6, committing aggravated penetrative sexual assault is punishable with rigorous imprisonment of not less than twenty years up to life, or with death, and a fine.",
+    "Under Section 8, committing sexual assault is punishable with imprisonment of not less than three years up to five years, and a fine.",
+    "Under Section 12, committing sexual harassment upon a child is punishable with imprisonment for a term which may extend to three years, and a fine."
+  ],
+  "who_can_benefit": [
+    "Any person below the age of eighteen years, defined as a child under Section 2(c), benefits from the comprehensive protections against sexual assault, harassment, and pornography.",
+    "Children below the age of sixteen years benefit from enhanced legal protection under Section 4(2), which mandates a minimum punishment of twenty years of imprisonment for offenders.",
+    "Children below the age of twelve years benefit from stricter legal recourse as offences against them are automatically classified as aggravated penetrative sexual assault under Section 5(i).",
+    "Children with physical or mental disabilities benefit from heightened protection under Section 5(l), which classifies sexual offences against them as aggravated penetrative sexual assault."
+  ],
+  "source_url": "https://www.indiacode.nic.in/show-data?actid=AC_CEN_9_12_00002085_201232&sectionId=31749&sectionno=1&orderno=1",
+  "audio_url": "/api/audio/pocso-act"
+}

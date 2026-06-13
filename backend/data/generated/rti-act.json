@@ -1,0 +1,33 @@
+{
+  "slug": "rti-act",
+  "name": "Right to Information Act",
+  "full_name": "Right to Information Act, 2005",
+  "icon": "📜",
+  "short_description": "Empowers citizens to request and access information held by government departments and public authorities, promoting transparency and accountability. You can inspect official documents, take notes, and receive copies within 30 days, without having to provide any reason for your request.",
+  "summary": "The Right to Information (RTI) Act, 2005, is a powerful law that gives every Indian citizen the right to ask questions and get answers from government departments. It covers central and state governments, local bodies, and government-funded organizations. This law matters because it promotes honesty and transparency, helping citizens hold the government accountable and fight corruption.\n\nUnder this law, you can request official documents, files, emails, and even inspect government work. You do not need to give any reason for asking. Once you submit a request, the government must reply within 30 days. If the information concerns a person's life or liberty, they must answer within 48 hours. If the government fails to reply on time, they must give you the information for free.\n\nWhile most information is accessible, some sensitive details—like national security secrets or personal private data—are protected. If an officer wrongly rejects your request, delays the response, or gives false details, you can appeal to higher authorities, and the guilty officer can be fined.",
+  "key_rights": [
+    "Under Section 3, all citizens have the right to access information held by or under the control of any public authority.",
+    "Under Section 2(j)(i) and (ii), citizens have the right to inspect work, documents, and records, as well as take notes, extracts, or certified copies of those documents.",
+    "Under Section 2(j)(iii) and (iv), citizens have the right to take certified samples of material and obtain information in electronic modes or through printouts.",
+    "Under Section 19(1), any person who does not receive a timely decision or is aggrieved by a decision has the right to file an appeal with a senior officer within thirty days."
+  ],
+  "important_provisions": [
+    "Section 4(1) obligates every public authority to maintain, catalog, index, and computerize its records to facilitate the right to information.",
+    "Section 6(2) provides that an applicant requesting information is not required to give any reason for the request or any personal details except contact information.",
+    "Section 7(1) mandates that the Public Information Officer must provide the requested information or reject the request within thirty days, or within forty-eight hours if it concerns the life or liberty of a person.",
+    "Section 8(1) outlines specific exemptions from disclosure, including information that prejudicially affects the sovereignty of India, constitutes contempt of court, or invades personal privacy."
+  ],
+  "penalties": [
+    "Under Section 20(1), the Information Commission shall impose a penalty of two hundred and fifty rupees per day on any Public Information Officer who fails to receive an application or furnish information within the specified time without reasonable cause.",
+    "Under Section 20(1), the total penalty imposed on a Public Information Officer for non-compliance or obstruction shall not exceed twenty-five thousand rupees.",
+    "Under Section 20(1), penalties are applicable if a Public Information Officer malafidely denies a request, knowingly gives incorrect, incomplete, or misleading information, or destroys requested information."
+  ],
+  "who_can_benefit": [
+    "All citizens of India can benefit from the right to access information under Section 3 of the Act.",
+    "Any person seeking information can benefit by making a request in writing or through electronic means in English, Hindi, or the local official language under Section 6(1).",
+    "Individuals whose life or liberty is at stake benefit from the expedited forty-eight-hour response provision under Section 7(1).",
+    "Third parties, including public authorities, benefit from protections against the unauthorized disclosure of their confidential commercial or personal information under Section 8(1)."
+  ],
+  "source_url": "https://cic.gov.in/sites/default/files/Right%20to%20Information%20Act-2005_0.pdf",
+  "audio_url": "/api/audio/rti-act"
+}
