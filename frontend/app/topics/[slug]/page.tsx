@@ -119,7 +119,7 @@ function SummaryPanel({ topic }: { topic: TopicDetail }) {
         <AudioPlayer slug={topic.slug} topicName={topic.name} />
       ) : (
         <div className="card" style={{ padding: 24, textAlign: "center", color: "var(--text-muted)" }}>
-          <p style={{ display: "flex", alignItems: "center", gap: 8, justifyContent: "center" }}><FaHeadphones /> Audio summary not yet generated. Run the pipeline to generate it.</p>
+          <p style={{ display: "flex", alignItems: "center", gap: 8, justifyContent: "center" }}><FaHeadphones /> Audio summary not yet generated.</p>
         </div>
       )}
     </div>
@@ -139,8 +139,17 @@ function AudioPlayer({ slug, topicName }: { slug: string; topicName: string }) {
   const togglePlay = () => {
     const audio = audioRef.current;
     if (!audio) return;
-    if (playing) { audio.pause(); setPlaying(false); }
-    else { audio.play(); setPlaying(true); }
+    if (playing) { 
+      audio.pause(); 
+      setPlaying(false); 
+    } else { 
+      audio.play().then(() => {
+        setPlaying(true);
+      }).catch((err) => {
+        console.error("Audio playback error:", err);
+        setPlaying(false);
+      });
+    }
   };
 
   const handleTimeUpdate = () => {
@@ -170,6 +179,8 @@ function AudioPlayer({ slug, topicName }: { slug: string; topicName: string }) {
       <audio
         ref={audioRef}
         src={audioUrl}
+        crossOrigin="anonymous"
+        preload="metadata"
         onTimeUpdate={handleTimeUpdate}
         onLoadedMetadata={handleLoadedMetadata}
         onEnded={() => setPlaying(false)}

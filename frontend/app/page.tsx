@@ -198,7 +198,7 @@ function ErrorState({ message }: { message: string }) {
         {message}
       </p>
       <p style={{ color: "var(--text-muted)", fontSize: "0.85rem" }}>
-        Run <code style={{ background: "rgba(255,255,255,0.05)", padding: "2px 8px", borderRadius: 4 }}>python seed_pipeline.py</code> in the backend directory to populate the knowledge base.
+        Knowledge base is currently empty.
       </p>
     </div>
   );

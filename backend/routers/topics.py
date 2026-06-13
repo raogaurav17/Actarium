@@ -61,7 +61,7 @@ async def list_topics() -> TopicsResponse:
     if not cards:
         raise HTTPException(
             status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
-            detail="Knowledge base not yet populated. Run seed_pipeline.py first.",
+            detail="Knowledge base not yet populated.",
         )
     return TopicsResponse(topics=cards)
 
@@ -84,7 +84,7 @@ async def get_topic(slug: str) -> TopicDetail:
     if not row:
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,
-            detail=f"Topic '{slug}' not yet processed. Run seed_pipeline.py.",
+            detail=f"Topic '{slug}' not yet processed.",
         )
 
     key_info = KeyInfo(

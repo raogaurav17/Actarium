@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import logging
+import asyncio
 from contextlib import asynccontextmanager
 
 from fastapi import FastAPI, Request, status
@@ -12,6 +13,7 @@ from slowapi.errors import RateLimitExceeded
 
 from config import get_settings
 from routers import topics, chat, search, audio
+from pipeline.ingest import sync_vector_db
 
 logging.basicConfig(
     level=logging.INFO,
@@ -26,6 +28,8 @@ limiter = Limiter(key_func=get_remote_address, default_limits=["60/minute"])
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     logger.info("startup")
+    # Run vector db sync in background to not block startup
+    asyncio.create_task(asyncio.to_thread(sync_vector_db))
     yield
     logger.info("shutdown")
 
@@ -47,8 +51,9 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[settings.frontend_url, "http://localhost:3000", "http://127.0.0.1:3000"],
     allow_credentials=True,
-    allow_methods=["GET", "POST"],
-    allow_headers=["Content-Type", "Authorization"],
+    allow_methods=["*"],
+    allow_headers=["*"],
+    expose_headers=["Content-Range", "Accept-Ranges", "Content-Length", "Content-Type"],
 )
 
 

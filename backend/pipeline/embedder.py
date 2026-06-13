@@ -38,21 +38,17 @@ def get_vector_store() -> Chroma:
 
 
 def get_retriever(topic_slug: str | None = None, k: int = 5):
-    # Returns scoped retriever
+    # Returns scoped retriever using MMR
     store = get_vector_store()
-    search_kwargs: dict = {"k": k}
+    search_kwargs: dict = {"k": k, "fetch_k": k * 4}
     if topic_slug:
         search_kwargs["filter"] = {"topic_slug": topic_slug}
-    return store.as_retriever(search_type="similarity", search_kwargs=search_kwargs)
+    return store.as_retriever(search_type="mmr", search_kwargs=search_kwargs)
 
 
 def similarity_search(query: str, topic_slug: str | None = None, k: int = 10) -> list[Document]:
-    # Cosine similarity search with relevance scores
+    # MMR search for broader context
     store = get_vector_store()
     filter_dict = {"topic_slug": topic_slug} if topic_slug else None
-    results = store.similarity_search_with_relevance_scores(query=query, k=k, filter=filter_dict)
-    docs = []
-    for doc, score in results:
-        doc.metadata["relevance_score"] = float(score)
-        docs.append(doc)
+    docs = store.max_marginal_relevance_search(query=query, k=k, fetch_k=k * 4, filter=filter_dict)
     return docs

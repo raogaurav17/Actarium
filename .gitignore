@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.venv/
+venv/
+env/
+*.egg-info/
+dist/
+build/
+
+# Environment secrets — NEVER commit
+.env
+.env.local
+.env.production
+.secret_key
+*.json.credentials
+
+# Data (large files — use cloud storage in prod)
+backend/data/raw/
+backend/data/audio/
+backend/chroma_db/
+
+# Node
+node_modules/
+.next/
+frontend/.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log

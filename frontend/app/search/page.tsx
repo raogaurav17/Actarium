@@ -102,6 +102,7 @@ export default function SearchPage() {
             id="search-btn"
             onClick={() => doSearch(query)}
             disabled={!query.trim() || loading}
+            suppressHydrationWarning
             className="btn btn-primary"
             style={{ flexShrink: 0 }}
             aria-label="Search"
