@@ -1,5 +1,3 @@
-# Central config. All secrets from env only — never hardcode.
-
 from __future__ import annotations
 
 import os
@@ -80,7 +78,6 @@ TOPICS = [
         "full_name": "Protection of Children from Sexual Offences Act, 2012",
         "icon": "shield",
         "source_url": "https://www.indiacode.nic.in/show-data?actid=AC_CEN_9_12_00002085_201232&sectionId=31749&sectionno=1&orderno=1",
-        "source_type": "html",
     },
     {
         "slug": "consumer-protection-act",
@@ -88,7 +85,6 @@ TOPICS = [
         "full_name": "Consumer Protection Act, 2019",
         "icon": "scale",
         "source_url": "https://consumeraffairs.gov.in/public/upload/files/Consumer_Protection_Act_2019.pdf",
-        "source_type": "pdf",
     },
     {
         "slug": "cyber-crime-laws",
@@ -96,7 +92,6 @@ TOPICS = [
         "full_name": "Information Technology Act, 2000 (Cyber Crime Provisions)",
         "icon": "lock",
         "source_url": "https://www.indiacode.nic.in/show-data?actid=AC_CEN_23_1_00001999_200021&sectionId=13085&sectionno=1&orderno=1",
-        "source_type": "html",
     },
     {
         "slug": "rti-act",
@@ -104,7 +99,6 @@ TOPICS = [
         "full_name": "Right to Information Act, 2005",
         "icon": "scroll",
         "source_url": "https://cic.gov.in/sites/default/files/Right%20to%20Information%20Act-2005_0.pdf",
-        "source_type": "pdf",
     },
     {
         "slug": "gst-registration",
@@ -112,7 +106,6 @@ TOPICS = [
         "full_name": "Goods and Services Tax — Registration Provisions (CGST Act, 2017)",
         "icon": "receipt",
         "source_url": "https://cbic-gst.gov.in/cgst-act-2017.html",
-        "source_type": "html",
     },
 ]
 

@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { FaBalanceScale, FaGoogle } from "react-icons/fa";
+import { FaBalanceScale, FaGoogle, FaEnvelope, FaLock } from "react-icons/fa";
+import { signInWithEmail, signUpWithEmail, signInWithGoogle } from "@/lib/auth";
 
 export default function LoginPage() {
   const [mode, setMode] = useState<"login" | "signup">("login");
@@ -10,32 +11,55 @@ export default function LoginPage() {
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState<{ type: "success" | "error"; text: string } | null>(null);
 
+  const supabaseConfigured =
+    !!process.env.NEXT_PUBLIC_SUPABASE_URL &&
+    process.env.NEXT_PUBLIC_SUPABASE_URL !== "https://your-project.supabase.co";
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!supabaseConfigured) {
+      setMessage({ type: "error", text: "Supabase is not configured. Add NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_ANON_KEY to .env.local." });
+      return;
+    }
     setLoading(true);
     setMessage(null);
+    try {
+      const { error } =
+        mode === "login"
+          ? await signInWithEmail(email, password)
+          : await signUpWithEmail(email, password);
 
-    // TODO: Wire up Supabase Auth here when SUPABASE_URL/KEY are configured
-    // For now, show a friendly placeholder message
-    setTimeout(() => {
-      setMessage({
-        type: "success",
-        text: mode === "login"
-          ? "Authentication coming soon! Configure Supabase credentials to enable login."
-          : "Sign-up coming soon! Configure Supabase credentials to enable registration.",
-      });
+      if (error) {
+        setMessage({ type: "error", text: error.message });
+      } else {
+        setMessage({
+          type: "success",
+          text: mode === "login"
+            ? "Signed in successfully! Redirecting..."
+            : "Account created! Check your email to confirm your address.",
+        });
+        if (mode === "login") {
+          setTimeout(() => { window.location.href = "/"; }, 1200);
+        }
+      }
+    } catch (err: any) {
+      setMessage({ type: "error", text: err.message || "An error occurred." });
+    } finally {
       setLoading(false);
-    }, 800);
+    }
+  };
+
+  const handleGoogle = async () => {
+    if (!supabaseConfigured) {
+      setMessage({ type: "error", text: "Supabase is not configured. Add credentials to .env.local." });
+      return;
+    }
+    const { error } = await signInWithGoogle();
+    if (error) setMessage({ type: "error", text: error.message });
   };
 
   return (
-    <div style={{
-      minHeight: "80vh",
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
-      padding: "40px 24px",
-    }}>
+    <div style={{ minHeight: "80vh", display: "flex", alignItems: "center", justifyContent: "center", padding: "40px 24px" }}>
       {/* Background orbs */}
       <div style={{ position: "fixed", inset: 0, overflow: "hidden", pointerEvents: "none", zIndex: 0 }}>
         <div className="orb" style={{ width: 400, height: 400, background: "var(--color-primary)", top: -100, right: -100 }} />
@@ -45,7 +69,7 @@ export default function LoginPage() {
       <div style={{ width: "100%", maxWidth: 420, position: "relative", zIndex: 1 }}>
         {/* Logo */}
         <div style={{ textAlign: "center", marginBottom: 40 }}>
-          <span style={{ fontSize: "3rem" }}><FaBalanceScale /></span>
+          <span style={{ fontSize: "3rem", display: "flex", justifyContent: "center" }}><FaBalanceScale /></span>
           <h1 style={{ fontSize: "1.8rem", marginTop: 12 }}>
             <span className="gradient-text">Actarium</span>
           </h1>
@@ -55,24 +79,13 @@ export default function LoginPage() {
         </div>
 
         <div className="card" style={{ padding: 32 }}>
-          {/* Toggle */}
+          {/* Mode toggle */}
           <div className="tab-list" style={{ marginBottom: 28 }}>
-            <button
-              id="tab-login"
-              className={`tab-btn ${mode === "login" ? "active" : ""}`}
-              onClick={() => setMode("login")}
-            >
-              Sign In
-            </button>
-            <button
-              id="tab-signup"
-              className={`tab-btn ${mode === "signup" ? "active" : ""}`}
-              onClick={() => setMode("signup")}
-            >
-              Sign Up
-            </button>
+            <button id="tab-login" className={`tab-btn ${mode === "login" ? "active" : ""}`} onClick={() => setMode("login")}>Sign In</button>
+            <button id="tab-signup" className={`tab-btn ${mode === "signup" ? "active" : ""}`} onClick={() => setMode("signup")}>Sign Up</button>
           </div>
 
+          {/* Feedback message */}
           {message && (
             <div style={{
               padding: "12px 16px",
@@ -87,10 +100,24 @@ export default function LoginPage() {
             </div>
           )}
 
+          {!supabaseConfigured && (
+            <div style={{
+              padding: "10px 14px",
+              marginBottom: 20,
+              borderRadius: "var(--radius-sm)",
+              background: "rgba(245,158,11,0.08)",
+              border: "1px solid rgba(245,158,11,0.25)",
+              color: "var(--color-gold)",
+              fontSize: "0.8rem",
+            }}>
+              Auth is disabled — Supabase not configured. You can still use the app anonymously.
+            </div>
+          )}
+
           <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: 16 }}>
             <div>
-              <label htmlFor="email" style={{ display: "block", color: "var(--text-secondary)", fontSize: "0.875rem", marginBottom: 6 }}>
-                Email
+              <label htmlFor="email" style={{ display: "flex", alignItems: "center", gap: 6, color: "var(--text-secondary)", fontSize: "0.875rem", marginBottom: 6 }}>
+                <FaEnvelope /> Email
               </label>
               <input
                 id="email"
@@ -104,8 +131,8 @@ export default function LoginPage() {
               />
             </div>
             <div>
-              <label htmlFor="password" style={{ display: "block", color: "var(--text-secondary)", fontSize: "0.875rem", marginBottom: 6 }}>
-                Password
+              <label htmlFor="password" style={{ display: "flex", alignItems: "center", gap: 6, color: "var(--text-secondary)", fontSize: "0.875rem", marginBottom: 6 }}>
+                <FaLock /> Password
               </label>
               <input
                 id="password"
@@ -136,7 +163,7 @@ export default function LoginPage() {
               id="google-oauth-btn"
               className="btn btn-secondary"
               style={{ width: "100%", justifyContent: "center" }}
-              onClick={() => setMessage({ type: "success", text: "Google OAuth requires Supabase configuration." })}
+              onClick={handleGoogle}
             >
               <FaGoogle /> Continue with Google
             </button>
